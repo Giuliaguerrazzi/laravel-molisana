@@ -14,5 +14,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    include 'database/data.php';
+
+    $lunghe = [];
+    $corte = [];
+    $cortissime = [];
+
+    foreach ($data as $card){
+        if($card['tipo'] == 'lunga'){
+            $lunghe[] = $card;
+        }
+        elseif ($card['tipo'] == 'corta'){
+            $corte[] = $card;
+        }
+        elseif ($card['tipo'] == 'cortissima'){
+            $cortissime[] = $card;
+        }
+    }
+
+    return view('welcome', ['lunghe' => $lunghe, 'corte' => $corte, 'cortissime' => $cortissime]);
 });
