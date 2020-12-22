@@ -14,3 +14,12 @@ img {
   margin: 0 auto;
   padding: 0 16px;
 }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cards .card {
+  flex-basis: 32%;
+  margin-right: 1%;
+}
