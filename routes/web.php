@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    include 'database/data.php';
+    $data = config('site-data');
 
     $lunghe = [];
     $corte = [];
@@ -32,5 +32,19 @@ Route::get('/', function () {
         }
     }
 
-    return view('welcome', ['lunghe' => $lunghe, 'corte' => $corte, 'cortissime' => $cortissime]);
-});
+    // return view('welcome', ['lunghe' => $lunghe, 'corte' => $corte, 'cortissime' => $cortissime]);
+    return view('welcome', compact('lunghe', 'corte', 'cortissime'));
+
+}) ->name('welcome');
+
+Route::get('/product/{id}', function($id) {
+   
+
+    $data = config('site-data');
+
+    $product = $data[$id];
+    $length = count($data) -1;
+
+
+    return view('product', compact('product', 'length', 'id'));
+})->name('product');
