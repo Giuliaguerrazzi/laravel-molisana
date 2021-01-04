@@ -20,7 +20,11 @@ Route::get('/', function () {
     $corte = [];
     $cortissime = [];
 
-    foreach ($data as $card){
+    foreach ($data as $key => $card){
+
+        // creiamo la chiave per l'array
+        $card['id'] = $key;
+
         if($card['tipo'] == 'lunga'){
             $lunghe[] = $card;
         }

@@ -1,0 +1,23 @@
+main {
+    background: url('../img/fondo-pag-speciali.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    padding: 40px;
+
+    .product {
+        position: relative;
+
+        .navigation {
+            &:first-child {
+                position: absolute;
+                top: 50%;
+                left: 0;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                top: 50%;
+                right: 0;
+            }
+        }
+    }
+}

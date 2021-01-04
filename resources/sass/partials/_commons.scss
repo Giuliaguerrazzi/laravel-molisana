@@ -7,4 +7,31 @@ body {
 img {
     max-width: 100%;
     height: auto;
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+.description {
+    background: #b8dae4;
+    padding: 20px;
+    display: block;
+    color: #002d73;
+    font-size: 20px;
+}
+
+i {
+    color: #fff;
+    font-size: 30px;
+}
+
+.hero {
+    background: #b8dae4;
+
+    h1 {
+        text-align: center;
+        padding-top: 20px;
+    }
 }

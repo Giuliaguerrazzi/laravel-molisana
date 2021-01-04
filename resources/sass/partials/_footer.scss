@@ -1,0 +1,40 @@
+footer {
+    background: url('../img/footer-montagne-bottom.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: #fff;
+    padding: 40px;
+
+    .container {
+        display: flex;
+    }
+   
+    .list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .list-right {
+        margin-top: 35px;
+        margin-left: 60px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    footer .container {
+        display: inline;
+    }
+    footer .list-right {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 541px) and (max-width: 768px) {
+    footer .container {
+        display: inline;
+    }
+    footer .list-right {
+        margin-left: 0;
+    }
+}
